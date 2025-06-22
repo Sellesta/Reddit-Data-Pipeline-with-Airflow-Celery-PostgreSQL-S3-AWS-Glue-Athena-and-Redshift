@@ -1,0 +1,318 @@
+id,title,selftext,score,num_comments,author,created_utc,url,upvote_ratio,over_18,edited,spoiler,stickied
+19difxp,Is the Data Space really this Complicated or am I just overthinking?,"For some reason, everytime I try to learn I see new tools and how they ease the existing work. And I end up wasting more time where if I spent that on actually learning, I would be way ahead. How do you know which tool to pick and choose(from the noise in the market) ?
+
+https://preview.redd.it/ji5thy5f05ec1.png?width=2013&format=png&auto=webp&s=167f4e2afce621cc135d5a0ff7d5c484fedaa032",73,73,_areebpasha,2024-01-23 06:55:02,https://www.reddit.com/r/dataengineering/comments/19difxp/is_the_data_space_really_this_complicated_or_am_i/,0.89,False,False,False,False
+19dry3i,What do you think about Apache Pulsar?,"Pulsar is a robust data streaming and messaging platform, similar to Kafka, but with more features out-of-the-box like schema-registry, multi-tenancy, geo-replication, and tiered storage.
+
+It has been an Apache top-level project since 2018 ([https://pulsar.apache.org](https://pulsar.apache.org/)). Many big companies like Tencent, Discord, Flipkart, and Intuit use it.
+
+Unlike Kafka, it processes messages individually, instead of just using offsets. Horizontal scaling is painless in comparison with Kafka, thanks to the separation of compute and storage nodes. Supports millions of topics.
+
+When I first heard about the Pulsar, I thought my dreams had come true. 🌈🦄
+
+Now I'm trying to understand why there is not much buzz in public about it:
+
+* Is it a marketing flaw and people just didn't ever hear about it?
+* Or is there something wrong or missing in Pulsar?
+* Maybe it is just an overkill for most new projects?
+
+I would greatly appreciate hearing about your experience and thoughts on Pulsar.",28,24,visortelle,2024-01-23 16:12:17,https://www.reddit.com/r/dataengineering/comments/19dry3i/what_do_you_think_about_apache_pulsar/,0.85,False,1706026742.0,False,False
+19de5wg,Entry level + Fully Remote... How unrealistic?,"My goal is to get a fully-remote, entry-level job in data engineering. How unrealistic is that?
+
+Be brutally honest... better to crush my dreams now rather than study for months only to find out later.
+
+I have no experience in data engineering, but I do have a phd in a stem field and 4 years working as a data scientist",17,44,KimchiFitness,2024-01-23 02:52:12,https://www.reddit.com/r/dataengineering/comments/19de5wg/entry_level_fully_remote_how_unrealistic/,0.7,False,False,False,False
+19djant,ETL pipeline from SQL Server to Postgres,"Im currently working on an ETL pipeline to move tables from SQL Server on a server to Postgres on another server, and then do operations on those tables in Postgres on a daily schedule. Some of those tables contain geospatial data.
+
+I currently implemented the pipeline through python scripts using pandas and sqlalchemy
+
+For tables with spatial data I use geopandas and geosqlalchemy
+
+The process is functional so far but it takes too long to move large tables 
+
+How can I speed up moving tables from SQL Server to Postgres? What kind of tools/ideas would be better to implement?",13,26,bolt_runner,2024-01-23 07:53:08,https://www.reddit.com/r/dataengineering/comments/19djant/etl_pipeline_from_sql_server_to_postgres/,0.9,False,False,False,False
+19dp67h,Am I romanticizing DE?,"Summary:
+
+* B.S. in Microbiology & Chemistry 
+* 10 years of work experience - clinical research, teaching, & sales
+* No coding experience 
+* Strong soft skills
+* Currently working fully remote
+
+Debating between nursing school vs a DE bootcamp/master program. I want to retain the flexibility of remote work while gaining hard skills to create stability in my career. My lack of experience in coding makes me nervous, however, I am willing to do what it takes to break into the field. Just need some reassurance...whether it's positive or negative.  
+
+Am I turning this career path into a ""feel good"" dream or is it feasible? 
+
+Much love. ",12,16,ItsWetInPortland,2024-01-23 14:05:53,https://www.reddit.com/r/dataengineering/comments/19dp67h/am_i_romanticizing_de/,0.77,False,False,False,False
+19dde12,What do you do with depreciated applications in your code base?,"I recently launched a POC data pipeline and now that it’s seeing production workloads I want to refactor it. It’s like a combination of 3 data pipelines, synchronously working, and I want to turn it into 3 smaller pipelines that run asynchronously.
+
+I figure this will result in three smaller projects that steal code from the POC and depreciation of the POC. So, what is typically done to the POC?
+
+I use git like most.",8,7,DuckDatum,2024-01-23 02:13:46,https://www.reddit.com/r/dataengineering/comments/19dde12/what_do_you_do_with_depreciated_applications_in/,1.0,False,False,False,False
+19dtqiu,DBT for On-Prem ETL,"So, to provide some background, I currently run a very small data team in an industry that’s heavily biased towards on-prem. After facing some limitations with SSIS, we’re looking to move to a more modern ETL solution. My issue is we are currently built to run on-prem ETL while modern architecture seems to focus cloud ELT.
+
+My current setup is as follows: 
+1. Extract data from a variety of structured SQL servers (most on-prem, some accessed through VPN. All have direct SQL access)
+2. Transform that data using SQL into a more usable, de-normalized format
+3. Upload the data into our on-prem data warehouse for analytics. 
+
+A few complicating factors:
+1. Several of our vendors are moving to the cloud and I’ll need to export the data via API (and one vendor through snowflake)
+2. Our largest data table is under 30 million rows, I don’t expect I need anything more complicated than polars/pandas and SQL
+3. In the future, we’d like to be able to ingest and process high frequency (~5-15s) data loaded via 1 hour batches. I don’t need streaming yet nor do I want to implement it. 
+
+Tools I’ve considered:
+Mage*
+Dagster
+Airflow
+Pandas/Polars*
+DuckDB
+DBT*
+Minio*
+
+*Current favorite for that role
+
+
+My thought is, if I’m rebuilding this anyway, would it make more sense to move to an ELT architecture with DBT or maintain my ETL architecture with Python/SQL. What would that look like? Load everything raw into parquet files and process from there? Load raw data into intermediate tables on the same server as the data warehouse? If the majority of my data is already structured, should I bother with parquet? I apologize for the deluge of questions, I’m trying to wrap my head around this new world order after spending too long in the comfortable embrace of SSIS. I appreciate your help!",7,2,Lord_Lloydd,2024-01-23 17:30:25,https://www.reddit.com/r/dataengineering/comments/19dtqiu/dbt_for_onprem_etl/,0.89,False,False,False,False
+19dtn2u,How to do design a near real-time data job,"I need to create a python app that will output data e.g. every 5s (ideally should be parametrizable to e.g. 10s or 1 day). Input is realtime data stream from RabbitMQ/Kafka. Every 5s app should look into the queue and take all data between defined start and end time - i.e. every run instance should be idempotent as it is defined by static start/end. Job should have some retrying logic in case something fails. App should run in on-premise Kubernetes cluster.
+
+I thought of 3 possible solutions:
+
+a) custom python app with some scheduler such as Airflow that could schedule the app in cluster every 5s
+
+b) custom python app that would run in an infinite loop as standalone pod in the cluster and every 5s or so would do the job
+
+c) use some existing solution that would solve both issues (data logic and scheduling) for me
+
+The issue with a) is we need a robust scheduler that could handle all the job spawns (each 5s, each 10s etc.)
+
+The issue with b) is there is less transparency in case app crashes and also since its only one app in case it crashes all runs that should run after the crash won't run until the app is fixed (scheduler would schedule all the following runs despite previous fails)
+
+The issue with c) is the only potential solution is Prefect but it has memory leak so when we run it for inifity it will eventually run out of memory.
+
+What would be the best approach to implement this?",6,3,romanzdk,2024-01-23 17:26:33,https://www.reddit.com/r/dataengineering/comments/19dtn2u/how_to_do_design_a_near_realtime_data_job/,1.0,False,False,False,False
+19dsy6j,Maybe bombed this interview question? Asked about data validation and accuracy,"I had a phone screen yesterday for a data analytics engineer role. 
+
+I was asked how do I monitor the data pipelines and ensure its accuracy. My response was, I enjoy working with the end user and am really great about getting constant feedback. I said how in my current role, as a Product Engineer, i spend a lot of time with users and going through user data/feedback to determine the success of a feature. 
+
+Now that I'm thinking about it -- they may have been asking me what tools I use.
+
+Earlier, I described a FastAPI poller I built that detected any new data from an AWS EC2 where I dumped everything. Then it took the new data, transformed it in into the ""pretty"" staging structures then updated the appropriate (separate) EC2 tables. In this case, I use pydantic models to ensure that the data is structured correctly. Any issues I can see in the logs. 
+
+Now that time has passed I think they were asking about testing (in dbt) and monitoring tools. 
+
+Is it worth following-up and clarifying?",4,10,No_Egg1537,2024-01-23 16:54:08,https://www.reddit.com/r/dataengineering/comments/19dsy6j/maybe_bombed_this_interview_question_asked_about/,0.84,False,False,False,False
+19dzhdr,DE hard-skills (using Pareto principle),"Hello, everyone!
+
+I'd like to move to the West in the near future working now more like in 2d world region. To do this, I think I need to master the appropriate stack (and understand the diff - as-is vs. to-be-done). I tried to make it reading this subreddit (thank you guys!) but want to calibrate it.
+
+My own is (biased ofc + couldn't sort):  
+1. Airflow (dagster or similar, airflow just preferable in my country; tool of orchestration, it's clear)  
+2. Postgres (relational db, very widespread, also no comment)  
+3. Spark (processing large data)  
+4. Analytical storage (dunno what to include here since stack varies greatly - on-prem (GP/CH) are used mostly here but not cloud)  
+5. Streaming (?)  
+.. and other stuff on roughly basic level (docker, superset/grafana, k8s, ELK/EFK, CI/CD etc.)
+
+I think mine may be cringy so could you share your own list and elaborate if possible (from top to bottom in terms of value)?
+
+Follow-up: when engineer can put ""experience with cloud"" on their resume? I have luck to interact with cloud on my current place, but I do simple stuff from first chapters of aws (compatible) docs. I think this is not even nearly enough.
+
+Thank you! If I missed similar discussion here share link please.",3,3,isk14yo,2024-01-23 21:26:10,https://www.reddit.com/r/dataengineering/comments/19dzhdr/de_hardskills_using_pareto_principle/,0.71,False,False,False,False
+19dt9fn,How to model and save these two data source.,"In a manufactoring project I have two sensors:
+
+1. Sensor 1: temperature data sampled at 10Hz continously.
+2. Sensor 2: 3-axis accelerometer data sampled at 6kHz in a window of 10s every 10m. In other words, every 10m I have a windows of 10s containing 10\*6k=60000 records. Every record has a timestamp, a value for axis x, y, and z. 60000x4 table.
+
+On sensors 2 data:
+
+The ideas is to perform, at some stage, a ""data engineering"" phase where the ""raw data"" from sensors 2 mentionted before are processed in order to output some informative and less-dimensional data. For instance, letting the inputs be:
+
+* Window 1 of 10s, sampled at 6kHz, every 10m has 60000x4 data (timestamp, x, y, z).
+* Window 2 of 10s, sampled at 6kHz, every 10m has 60000x4 data (timestamp, x, y, z).
+* ...
+* Window M: ...
+
+The output would be:
+
+* MxN table/matrix (windows\_id, timestamp\_start\_window, feature1, feature2, ..., feature N-2).
+
+Where N is the number of synthetic features created (e.g. mean x, median y, max z, min z, etc..) plus a timestamp (for instance the start of the window) and the windows ID and M is the number of windows.
+
+If I want to save these two data raw sources (inputs) into a file system or database, and also the synthetic data (outputs), how would you save them in order to be flexible and efficient with later data analysis? The analysis will be based on time-series algorithm in order to dedect patterns and anomaly detections.
+
+Note, the two sensors are an example of different sources with different requirements but the use case is not ""that simple"". I would like to discuss the design of modeling and storing/extraction of these time-series with easiness, scaling, and efficiency in mind.
+
+&#x200B;
+
+&#x200B;",4,1,Plenty-Button8465,2024-01-23 17:07:26,https://www.reddit.com/r/dataengineering/comments/19dt9fn/how_to_model_and_save_these_two_data_source/,1.0,False,False,False,False
+19dor5g,How do you decide on resource sizes?,I'm trying to figure out how to size resources for our data pipeline and warehouse. My boss wants me to calculate what each pipeline needs in terms of compute and RAM. Any ideas on how to evaluate and track these requirements? Would love to hear what's worked for you.,3,5,Kindly-Screen-2557,2024-01-23 13:45:40,https://www.reddit.com/r/dataengineering/comments/19dor5g/how_do_you_decide_on_resource_sizes/,1.0,False,False,False,False
+19dnoxa,"Parquet Row Group Sizing, how do you choose your sizing?","Like any other optimization, parquet row group sizing has trade-offs, when do you choose to go for more row groups or less row groups?",3,0,AMDataLake,2024-01-23 12:49:48,https://www.reddit.com/r/dataengineering/comments/19dnoxa/parquet_row_group_sizing_how_do_you_choose_your/,1.0,False,False,False,False
+19dmm6t,Data Vault or Dimensional Modelling?,"Hi,
+
+I am working on data engineering project, and am thinking what data modelling technique to use? Can someone give a suggestion?
+
+Thank you very much for reading and helping.",3,3,Aggressive-Nebula-44,2024-01-23 11:45:55,https://www.reddit.com/r/dataengineering/comments/19dmm6t/data_vault_or_dimensional_modelling/,0.8,False,False,False,False
+19e37y9,Introducing Aaron Johnson,,1,0,Dave-at-Koor,2024-01-24 00:04:54,https://koor.tech/blog/2024/welcome-aaron-johnson/,0.67,False,False,False,False
+19dwfaq,BI-like interface for data modeling in the semantic layer,,2,0,igorlukanin,2024-01-23 19:19:37,https://cube.dev/blog/introducing-playground-2,1.0,False,False,False,False
+19dsv7p,Copy Data from Sharepoint to the Azure Blob storage.,"I need to move and schedule the data copy operation from the company Sharepoint to the Azure Blob Storage. I am new to the Azure and found two candidate solutions.
+
+* Use Azure Data Factory predefined jobs.
+* Use Azure Functions with Python scripts.
+
+From what I gathered Azure Functions would be cheaper, this is not super hard to code so I wonder if there is any benefit to the ADF. Do you have any thoughts/recommendations?",2,0,bartosaq,2024-01-23 16:50:45,https://www.reddit.com/r/dataengineering/comments/19dsv7p/copy_data_from_sharepoint_to_the_azure_blob/,1.0,False,False,False,False
+19doe1t,Airflow backfill via UI,"Is it possible to backfill via the Airflow UI? I know that it's possible via CLI, but I have a requirement to do it over the UI, did some searching couldn't find much info, wonder if it's possible to do via UI. ",2,1,cjj1120,2024-01-23 13:27:05,https://www.reddit.com/r/dataengineering/comments/19doe1t/airflow_backfill_via_ui/,1.0,False,False,False,False
+19djcsf,New player to the game,"I recently started as a Data Analyst after a career change. As with many others, I was quickly identified as a candidate for a JDE role. Ever since (~2 months) I have been mainly working with spatial data in FME and handling pipelines and dashboards.
+
+My organization have suggested I take some training on spatial data, but I also want to know where else I can apply myself to progress becoming a Data Engineer. Any tips on specific skills, certifications, or experiences that could help me? I'd say I have moderate ability with SQL and basic Python understanding. Should I be putting all my time in data handling / manipulation in Python? Should I be looking at any other ETL tools (we currently use FME exclusively). Should I be considering database managent?? 
+
+Any help and advice is really appreciated!",2,1,BrittleTupperwareBox,2024-01-23 07:57:46,https://www.reddit.com/r/dataengineering/comments/19djcsf/new_player_to_the_game/,0.75,False,False,False,False
+19e2m1m,How would you do it? Make my plan better.,"So I'm currently doing Masters in Ai and Data and I don't have a CS bachelor degree not even related to it. It's in Finance/Business. 
+
+I have a few months till I graduate. I have had few projects using Python, I'm familiar with SQL. I know I need to get better at both of them. 
+
+I also wanted to do the Microsoft DP-203 and the AWS Data Engineer Associate / Solution Architect. 1. To fill cv and 2. To be familiar with cloud. 
+
+What else should I spend the next few months doing? And do I have a chance at landing my first job soon or no? Is this enough or not? 
+
+I'm in London (UK) if that helps.",1,0,Timeframe98,2024-01-23 23:37:51,https://www.reddit.com/r/dataengineering/comments/19e2m1m/how_would_you_do_it_make_my_plan_better/,1.0,False,False,False,False
+19e1pjk,I built Panora: an Open source alternative to Merge.dev,"Hey, I felt like paying a shit ton of money to unified APIs was unfair, so I decided to build an open-source alternative to Merge.dev.  
+It makes connecting your product to third-party SaaS such as CRMs, ticketing sofware easy. Using one API only, you get access to multiple SaaS.   
+This way you no longer need to dive into API documentation and data transformations.  
+
+
+Here's the Github : [https://github.com/panoratech/Panora](https://github.com/panoratech/Panora)   
+
+
+Have you ever used unified APIs? Any thoughts on them? ",1,0,Rich-Dentist-4255,2024-01-23 22:58:23,https://www.reddit.com/r/dataengineering/comments/19e1pjk/i_built_panora_an_open_source_alternative_to/,1.0,False,False,False,False
+19e0duk,Delta Live Tables - Handling Duplicates in Source Data,"Hey all -- 
+
+Terribly sorry if this is a stupid question, but having trouble figuring out the best way to handle duplicates in source data. Source data is coming into my bronze layer from parquet files in google cloud storage using autoloader. some records, but not all are duplicates.
+
+I'm very new to DLT (thus learning all aspects of it right now, contributing to my analysis paralysis) really having trouble finding some documentation on some best practices/patterns on how to handle this...
+
+what's especially difficult to wrap my mind around is that the duplicates will continue to live in the google cloud bucket... so if I use dropDuplicates() on an interim dataframe, I essentially have to perform the operation for the whole dataset each time?
+
+Links to any resources on where to start with this would be great.
+
+Thanks in advance.",1,1,osmosisjonesin,2024-01-23 22:03:03,https://www.reddit.com/r/dataengineering/comments/19e0duk/delta_live_tables_handling_duplicates_in_source/,1.0,False,False,False,False
+19e0dbt,Experiences with reverse ETL from BigQuery to Salesforce?,"We are currently using BigQuery for our analytics and want to get some data from there into Salesforce. So we looked at some tools and at first glance it seems Hightouch (which we already use for 1 or 2 small syncs between different systems) and Census would do the trick. 
+
+So we tested Hightouch and that does exactly what we want. However we do not like the costs involved, because you pay per active sync (and destination). Our use case is something like 6-20 active syncs, but only once a day and maybe 50-100K rows total a day. So we end up paying out of our noses for barely any data. 
+
+I also saw Skyvia and they seem to charge per record, which seems to be perfect for our use case. Does anyone here have real world experience with Skyvia? Any other alternatives I'm missing here? Curious to hear what your experiences are with similar use cases and how you solved them. ",1,3,KoeitjeNL,2024-01-23 22:02:25,https://www.reddit.com/r/dataengineering/comments/19e0dbt/experiences_with_reverse_etl_from_bigquery_to/,1.0,False,False,False,False
+19dz9k8,Storage Location being referenced to ADLS Container which is not mounted to Databricks cluster,"Hi Everyone,
+
+We are facing issue while reading file to process it.
+
+All the storage locations and parameters were set correctly. Still while file is being read into a data frame the storage is referring to ADLS Container which we didn't mention anywhere in the notebook nor it is mounted to Databricks Cluster. Any help is appreciated in resolving the issue.
+
+This is first time posting here. Kindly bear my mistakes if any.",1,1,Its__Ram,2024-01-23 21:17:08,https://www.reddit.com/r/dataengineering/comments/19dz9k8/storage_location_being_referenced_to_adls/,1.0,False,False,False,False
+19dz9i8,First Pipeline Help!,"I'm building a pipeline for a client. I usually focus on the modeling portion and recommend a tool like Fivetran or Stitch, but that wasn't an option. 
+
+So I've built a pipeline in Python that is moving data from their on-prem sources (oracle and SQL server) and loading it into Snowflake.
+
+What is the best/proven order of operations for loading data? My current process: 1) Pull data from the source system to a flat file, 2) load flat file to a stage on snowflake, 3) query meta data from source table to generate logic and create snowflake table, 4) load the stage to a table, and then 5) clean out the stage and the flat file.
+
+What am I missing? What are som ""best practices"" that I could apply to this process?",1,1,tpedar50,2024-01-23 21:17:05,https://www.reddit.com/r/dataengineering/comments/19dz9i8/first_pipeline_help/,1.0,False,False,False,False
+19du2hj,Getting a job asap or go full learning?,"Hi guys,
+
+I've graduated my bachelor and decided to put my time in Data Engineering cause it seems more interesting than other fields. I've been looking at what the fundamentals are and if I understand correctly I should focus on getting to an advanced level on Python and SQL first before moving to some suite of tools to build my first solo-project to demonstrate I can actually be of use to a company.
+
+I come to ask you pros/cons on this two approaches for the next months: 
+
+* Get a back-end developer job in my vicinity as quick as possible, even if it is not Data Engineering related, just to get some experience on my resume and not look like a complete beginner to future DE recruiters; i would study on a portion of my free time.
+* Not get a job and just spend my days studying DE and making that project to get good quicker than the first option; I don't know how long that would take and if being unemployed for that amount of time would look very bad on my resume. To give more info, I am not in a financial situation where I need a job to keep floating.",1,10,Di4mond4rr3l,2024-01-23 17:44:15,https://www.reddit.com/r/dataengineering/comments/19du2hj/getting_a_job_asap_or_go_full_learning/,1.0,False,False,False,False
+19dtj92,Does AGPLv3 in an upstream system affect licensing of data analytics code?,"  
+
+Hello!
+
+My question is about AGPLv3 open-source licensing as it concerns BI code that works “downstream” of the open source system. I'm hoping that others in this r/ will have had experience with this and be willing to share.
+
+I’m in charge of building a CRM and the corresponding BI platform that reads information that was entered into the CRM. The data platform is envisioned as a simple use of a business intelligence tool, running queries against the relational database that the CRM uses. 
+
+Our goal is to use the CRM/BI combination internally for a few years, then market the whole solution as a product once it’s mature. I think that using an open-source CRM could readily meet the company’s needs while we develop the BI part as proprietary software. But there is the issue of creating a product from it later…
+
+My concern is whether using an AGPLv3 licensed CRM for this interim period will require that I license the BI platform queries and data infrastructure as AGPLv3 as well. I am currently thinking that we’d have to share the BI queries/code because of the CRM’s licensing.
+
+The CRM comes with a core database schema, but it also defines the database schema in response to user inputs (e.g., give an account a FK relationship to some other entity we also defined in the CRM’s GUI, etc.). The fact that the CRM’s database’s core schema represents a creative effort of its own -- and is not merely output from the program like the user-defined schemas are -- makes me think we run afoul of creating a derivative work here. And, with the CRM being AGPLv3, network use is distribution, so we’d have to share everything.
+
+So, is that true?
+
+I understand the wording of the AGPLv3 mentions pipes and other common inter-process communication techniques as not constituting a derivative work, but I do not know where the line is as regards database schema, as described here.
+
+I’m hoping someone will be able to give some clarity. Thanks!",1,0,InternationalTea5284,2024-01-23 17:22:03,https://www.reddit.com/r/dataengineering/comments/19dtj92/does_agplv3_in_an_upstream_system_affect/,1.0,False,False,False,False
+19dsj3n,Pytest on Databricks,"I'm pulling my hear out with this one: 
+
+We've upgraded our cluster from 10.3 LTS, to 13.3 LTS and all the unit tests are not running . For 11.3 and everything in between it's the same.
+
+We even have a simple one that just checks if a given table has data. 
+
+As in: 
+assert df.count() > 0 
+
+And for each and every one of them we get: 
+
+OSError: [Errno 95] Operation not supported: 'Workspace/Repos/..../tests/__pycache__'
+
+Test called using
+If __name__ == '__main__':
+    pytest.main([test_file.py])
+
+Made sure these files are 'files' not 'notebooks', tried to delete them, put them back. Nothing seem to work. 
+
+Any advice?",1,1,albowiem,2024-01-23 16:36:37,https://www.reddit.com/r/dataengineering/comments/19dsj3n/pytest_on_databricks/,0.6,False,False,False,False
+19dsg0t,Navigating the Path to Data Engineering,"Hey guys I've recently graduated from college  and have completed chemical engineering and I want to transition to  data domain . I  need your help guys to get the answer to few of my questions 
+
+1) What are some specialized areas within data engineering, and how can one decide on a niche to focus on.
+
+2)Are there specific skills or certifications that stand out in the job market?
+
+3)What key elements should be highlighted on a resume to catch the attention of recruiters?",1,2,No-Salt5525,2024-01-23 16:33:05,https://www.reddit.com/r/dataengineering/comments/19dsg0t/navigating_the_path_to_data_engineering/,1.0,False,False,False,False
+19dq2rf,Cronitor & Airflow,Is anyone using Cronitor to monitor their Airflow instance? Would be curious to hear what the value add is to have another tool in the loop.,1,0,Express-Comb8675,2024-01-23 14:49:15,https://www.reddit.com/r/dataengineering/comments/19dq2rf/cronitor_airflow/,1.0,False,False,False,False
+19dpdzg,How to migrate Hive custom functions to BigQuery UDFs,"Excited to share my latest blog post on migrating Hive UDFs to BigQuery SQL UDFs! Whether you're a data engineer or a CTO, this guide is crafted to simplify your migration process. Dive into the step-by-step approach and discover how to leverage BigQuery's SQL for effective data processing. #BigQuery #DataMigration #HiveUDFs  
+[https://www.aliz.ai/en/blog/step-by-step-guide-to-migrating-hive-custom-functions-to-bigquery-sql-udfs](https://www.aliz.ai/en/blog/step-by-step-guide-to-migrating-hive-custom-functions-to-bigquery-sql-udfs) ",1,0,Constant-Collar9129,2024-01-23 14:16:29,https://www.reddit.com/r/dataengineering/comments/19dpdzg/how_to_migrate_hive_custom_functions_to_bigquery/,0.6,False,False,False,False
+19dojoh,How to manage drift between dbt and Redshift,"Hello !
+
+I am managing a team of 5 data engineers for the analytics of a retail compagnie and we use dbt and Redshift. The team is 5 years old and we have an accumulation of old databases that were not removed + manual changed that were made through the console and are not under control.  
+I have been searching but didn't find good tools to monitor it (would love to get something that points the differences between dbt and the real state of snowflake).  
+Any recommendations?",1,1,New_Detective_1363,2024-01-23 13:35:08,https://www.reddit.com/r/dataengineering/comments/19dojoh/how_to_manage_drift_between_dbt_and_redshift/,0.67,False,False,False,False
+19dniju,The Approach vs Technology Confusion: Where do Data Products Fit In?,,1,0,growth_man,2024-01-23 12:39:40,https://moderndata101.substack.com/p/the-approach-vs-technology-confusion,0.67,False,False,False,False
+19dega8,Using Airflow to execute preprocessing data for machine learning,"Hi guys, I began using Airflow recently. I am using it for my process server which user can import their file to data lake. Then I will pass these file location, ways to process and processed file destination to **Airflow** webserver throught API. **CeleryExecutor** then will add job to **rabbitMQ** and **workers** will execute that **DAG**. **DAG** contain 3 task: **Extract** (download data from data lake and read it as dataframe), **Transform** (perform some transformation to that df) and **Load** (load processed df back to data lake). My question is Is it common to reload data from data lake every time a dag is executed. I mean if user want to perform many process separately, then workers will have to reload data to RAM over and over again. Is there any way to optimize this or is there any better way to do this? Thanks for your reading ",1,7,resrrdttrt,2024-01-23 03:06:29,https://www.reddit.com/r/dataengineering/comments/19dega8/using_airflow_to_execute_preprocessing_data_for/,1.0,False,False,False,False
+19e1jv5,How much does your data team rely on SaaS products?,"There is a massive growth in SaaS data tools, and I was wondering how much people rely on such product. Excluding cloud data warehouses (Snowflake/Redshift/Data bricks).
+
+How much does your company rely on Salas tools for orchestration, data quality, data catalogs, ingestion, transformation? How big is your data team and your company's revenue? 
+
+Which products do you use as Salas and which do you self-host? Why? 
+
+What are the pros and cons of each?",0,1,exact-approximate,2024-01-23 22:51:32,https://www.reddit.com/r/dataengineering/comments/19e1jv5/how_much_does_your_data_team_rely_on_saas_products/,0.5,False,False,False,False
+19dm78e,GIST OF DRAGONFLY {www.dragonflydatahq.com} :-A No Nonsense Data Quality Monitoring Platform,"1) Dragonfly checks a company's data processing steps to create pipelines, making sure the data flows correctly.
+
+2) It connects health checks with components, allowing companies to configure listeners for events and get notified when data events occur.
+
+3.) Dragonfly protects against incorrect data by performing Health Checks that assess various aspects of data and generate a Data Confidence Rating (DCR).
+
+4.) Users can choose from a library of pre-written data quality checks or use Dragonfly GPT to convert simple English demands into Health Checks.
+
+5.) Dragonfly is an API-first platform, allowing integration with various databases and data platforms, ensuring data quality reports are easily accessible.
+
+6.) Dragonfly does not modify data, can work with read-only access, and does not copy data from the warehouse, maintaining the Data Confidence Rating (DCR).
+
+7.) Dragonfly converts checks and DCR reports into events, enabling users to receive alerts via email or SMS, or integrate events into systems like Apache Kafka or AWS SNS.
+
+8) As an API-first platform, Dragonfly integrates smoothly with various databases, data warehouses, and platforms like PostgreSQL, MySQL, AWS Redshift, and more
+
+9.)Dragonfly is a Data Quality Monitoring platform that aims to make data processing secure and accurate for companies.  
+
+
+**Would love to have your valuable feedback and reviews as i am one of the co-founders for this B2B Saas product**   
+",0,1,Decent_Ice1528,2024-01-23 11:19:23,https://www.reddit.com/r/dataengineering/comments/19dm78e/gist_of_dragonfly_wwwdragonflydatahqcom_a_no/,0.5,False,False,False,False
+19djvg7,Analyzing Hugging Face Datasets with Databend,,0,1,PsiACE,2024-01-23 08:35:56,https://www.databend.com/blog/2024-01-18-analyzing-hugging-face-datasets-with-databend/,0.33,False,False,False,False
+19dmods,How to handle one to many relationships in tables in a dashboard?,"Like for example, you have two tables - Orders and products. 
+Orders table contains - user_id, product_id, num_orders, and 
+Products table contains - product_id, product_category. 
+
+Now, one product can belong to multiple categories. So one entry in order table might get mapped to multiple entries in products table which leads to data duplicity. Like, total orders per category or per user might be misleading.
+
+What are the ways to handle this?",0,10,divyaanshDev,2024-01-23 11:49:42,https://www.reddit.com/r/dataengineering/comments/19dmods/how_to_handle_one_to_many_relationships_in_tables/,0.17,False,False,False,False
+19dutmk,Hello,"Hello, is it too late for a 23 yo to go for data engineering, I think need at least 5 years of studying, I don’t do anything right now. Is investing the next 5 years in data engineering or data science a good deal that i will benefit from in the future?",0,37,IbnQays,2024-01-23 18:14:11,https://www.reddit.com/r/dataengineering/comments/19dutmk/hello/,0.35,False,False,False,False

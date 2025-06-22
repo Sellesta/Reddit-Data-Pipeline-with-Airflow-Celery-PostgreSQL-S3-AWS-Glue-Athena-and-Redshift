@@ -1,0 +1,5 @@
+redditdata
+*.conf
+logs
+.idea
+__pycache__
